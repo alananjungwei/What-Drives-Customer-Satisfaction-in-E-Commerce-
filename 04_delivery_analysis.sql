@@ -138,7 +138,7 @@ ORDER BY late_delivery_percentage DESC;
 -- The Top 5 categories with the highest late delivery
 -- percentage range from 12.4 to 20.8%. Way higher than
 -- the average 8.11%. The categories include home, christmas
--- supllies, underwear_beach, furniture, and audio. 
+-- supplies, underwear_beach, furniture, and audio. 
 --
 -- BUSINESS INTERPRETATION
 -- Two noticeable and time-sensitive product categories stand 
