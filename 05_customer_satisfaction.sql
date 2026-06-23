@@ -128,11 +128,29 @@ ORDER BY ord.review_score;
 -- QUESTION 20:
 -- Do expensive products receive better ratings?
 -- ==================================================
-
+SELECT 
+	ord.review_score,
+	ROUND(AVG(oi.price), 2) AS average_price
+FROM olist_order_reviews_dataset ord 
+JOIN olist_order_items_dataset oi
+	ON ord.order_id = oi.order_id
+GROUP BY ord.review_score
+ORDER BY ord.review_score
 -- ==================================================
 -- FINDING
--- 
+-- No clear relationship was observed between product 
+-- price and customer review scores.
+--
+-- Average product prices ranged from $110 to $127 across 
+-- review scores, with no consistent increase or decrease
+-- as ratings improved.
 --
 -- BUSINESS INTERPRETATION
--- 
+-- Product price alone does not appear to be a significant
+-- driver of customer satisfaction.
+--
+-- Expensive products are not rated better or worse, 
+-- suggesting that factors such as delivery performance
+-- and product quality might play a larger role
+-- in customer satisfaction.
 -- ==================================================
